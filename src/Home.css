@@ -1,0 +1,59 @@
+.home{
+    background: url(./images/cover-background.jpeg) no-repeat center center fixed;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.instructions{
+    position: absolute;
+    width: 50%;
+    height: 60%;
+    top: 61%;
+    right: 10%;
+}
+
+.instructions ul{
+    
+    list-style: none;
+    
+}
+
+.instructions ul li{
+    font-size: 25px;
+    margin-bottom: 50px;
+    color: rgb(5, 32, 88);
+}
+
+@media only screen and (max-width: 1280px) {
+    .instructions{
+        top: 60%;
+        right: 15%;
+    }
+    .instructions ul li{
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+}
+
+/* @media only screen and (max-width: 1024px) {
+    .instructions{
+        top: 38.3%;
+        right: 34%;
+    }
+    .instructions ul li{
+        font-size: 10px;
+    }
+} */
+
+@media only screen and (max-width: 724px) {
+    .instructions{
+        top: 60%;
+        right: 27%;
+    }
+    .instructions ul li{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+}
