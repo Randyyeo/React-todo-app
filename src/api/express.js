@@ -44,4 +44,8 @@ API.signup = async (data) => {
     return await axios.post(`${origin}/users/signup`, data, setHeader());
 }
 
+API.token = async (token) => {
+    return await axios.get(`${origin}/auth`, setHeader(token))
+}
+
 export default API;

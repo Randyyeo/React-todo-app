@@ -6,10 +6,13 @@ import Home from './Home'
 import Calendar from './Calendar'
 import Add from './Add'
 import Today from './Today'
+import Layout from './components/Layout';
 
 
 function App() {
   return (
+    <Layout>
+      
     <Router>
       <Switch>
         <Route path='/' exact component={Home}/>
@@ -19,7 +22,8 @@ function App() {
         <Route path="/MyTodosHome/Add" exact component={Add} />
         <Route path="/MyTodosHome/Today" exact component={Today} />
       </Switch>
-    </Router>
+      </Router>
+      </Layout>
   )
 }
 export default App;

@@ -35,7 +35,7 @@
   }
   
   .form-control-check input {
-    flex: 2;
+    flex: 1;
     height: 20px;
   }
 
@@ -52,5 +52,11 @@
     height: 48px;
     border-radius: 8px;
     cursor: pointer;
+  }
+
+  .error{
+    font-size: 13px;
+    color: red;
+    margin-left: 5px;
   }
   

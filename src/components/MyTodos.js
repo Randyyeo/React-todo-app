@@ -4,12 +4,13 @@ import AddTask from "./AddTask"
 import Update from "./Update";
 import API from '../api/express';
 import { useState, useEffect } from 'react'
+import { useHistory } from "react-router";
 import './MyTodos.css'
 
 
 function MyTodos() {
   const [showAddTask, setShowAddTask] = useState(false)
-  
+  const history = useHistory();
   /* const getTodos = async () => {
     const res = await axios.get("http://localhost:4000/find");
     console.log(res.data)
@@ -35,8 +36,13 @@ function MyTodos() {
   useEffect(() => {
     const token = window.localStorage.getItem("token")
     const getTodos = async (token) => {
-      const res = await API.getAll(token);
-      setTasks(res.data)
+      try {
+        const res = await API.getAll(token);
+        setTasks(res.data)
+      } catch (err) {
+        history.push("/login")
+      }
+      
     }
     getTodos(token);
     
