@@ -27,6 +27,7 @@ export default function Signin() {
             window.localStorage.setItem("token", token);
             history.push('/MyTodosHome');
             console.log(window.localStorage.getItem("token"));
+            console.log("HELLO")
 
         } catch (error) {
             console.log(error)
@@ -44,6 +45,7 @@ export default function Signin() {
             const { token } = res.data;
             
             window.localStorage.setItem("token", token);
+            console.log(history)
             history.push('/MyTodosHome')
             
         } catch (error) {
@@ -59,11 +61,12 @@ export default function Signin() {
 
     return (
         <>
-            <div className="home-container">
-                <div className="login-container">
-                    {signin ? <Login toggleForm={toggle} login={login} error={errorLogin} /> : <Register toggleForm={toggle} register={register} error={errorRegister}/>}
-                </div>  
-            </div>
+
+        <div className="home-container">
+        <div className="login-container">
+            {signin ? <Login toggleForm={toggle} login={login} error={errorLogin} /> : <Register toggleForm={toggle} register={register} error={errorRegister}/>}
+        </div>  
+    </div> 
         </>
     )
 }
